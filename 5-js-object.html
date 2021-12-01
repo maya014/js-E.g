@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>object</title>
+</head>
+<body>
+	<button onclick="displayDate()">რომელი სათია?</button>
+	<p id="Date"></p>
+	<script>
+		var country = {
+    name: "შვეიცარია",
+    languages: ["გერმანული", "ფრანგული", "იტალიური"],
+    capital: {
+        name: "ბერნი",
+        population: 126598
+    },
+    cities: [
+        { name: "ციურიხი", population: 378884 },
+        { name: "ჟენევა", population: 188634 },
+        { name: "ბაზელი", population: 164937 }
+    ]
+};
+ 
+// country.languages ყველა ელემენტის გამოტანა
+document.write("<h3>შვეიცარიის ოფიციალური ენებია</h3>");
+for (var i = 0; i < country.languages.length; i++)
+    document.write(country.languages[i] + "<br/>");
+ 
+// country.cities ყველა ელემენტის გამოტანა
+document.write("<h3>შვეიცარიის ქალაქებია</h3>");
+for (var i = 0; i < country.cities.length; i++)
+    document.write(country.cities[i].name + "<br/>");
+  // ობიექტს აქვს თვისებები...
+   //population ყველა ელემენტის გამოტანა
+  document.write("<h3>დაარსების წელი</h3>");
+for (var i = 0; i < country.cities.length; i++)
+    document.write(country.cities[i].population + "<br/>");
+  
+
+  //სათისა და ღილაკის ნაწილი
+  function displayDate() {
+  document.getElementById("Date").innerHTML = Date();
+}
+
+	</script>
+
+</body>
+</html>

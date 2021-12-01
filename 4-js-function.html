@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>function</title>
+</head>
+<body>
+	<script> 
+		function hello(){
+			document.write('გამარჯობა'+'<br>')
+		}
+		hello();
+		/*ამ დროს ვიძახებთ ფუნციას*/
+        var hello = function (){
+			document.write('ჯავასკიპტი'+'<br>')
+		}
+		hello();
+		//ამ დროს ცვლადით გამოვიძახე ფუნცია
+
+
+    function goodMorning(){
+    	document.write('დილა მშვიდობისა'+'<br>')
+    }
+	function goodEvning(){
+    	document.write('საღამო მშვიდობისა'+'<br>')
+    }
+    var message = goodMorning;
+    message(); //დილამშვიდობისა
+    var message = goodEvning;
+    message(); //საღამომშვიდობისა
+    //ცვლადს მივანიჭეთ დინამიურად მიმართვა
+
+    function display(x) {  // ფუნქციის განსაზღვრა
+    var z = x * x;
+    document.write(x + " კვადრატში ტოლია " + z +'<br>');
+    }
+    display(15); // ფუნქციის გამოძახება
+    // -x გამოძახებისას ღებულობს პარამეტრს 15
+
+
+    
+	</script>
+
+
+</body>
+</html>

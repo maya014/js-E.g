@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>განცხადებები-statements</title>
+</head>
+<body>
+<div>
+  	<h2>გამოიტანოს პასუხი ცვლადებით let გამოყენებით
+  	100+15</h2>
+	 <p id="elnumber"></p>
+	</div>
+	<script>
+		let x, y, z; //ცვლადებს ვიყენებთ
+		x = 100; // იქსი არის ცვლადი 
+		y = 15;
+		z = x + y; //ეს იგივეა (5+15)
+		document.getElementById("elnumber").innerHTML = "პასუხი:"+"----"+ z + ".";
+		
+	</script>
+	<!-- let ნაწილი -->
+
+
+		<div>
+			<h2>function</h2>
+			<button type="button" onclick="myFunction()">დააჭირე</button>
+			<p id="elFunction"></p>
+			<p id="elFunction2"></p>
+		</div>
+		<script>
+			function myFunction(){
+				document.getElementById('elFunction').innerHTML = 'გამარჯობა';
+				document.getElementById('elFunction2').innerHTML = 'როგორ ხარ?';
+			} 
+			/*ამ ნაწილში ვიყენებთ ღილაკს და პ ელემეტებს სადაც ჯავასკრიპტში ფუნციას ვიყენებთ და ინერეიშტიემელს  რომლითაც დაჭერისას გამოაქ ტექსტური შეტყობინება პ ელემეტში ..*/
+		</script>
+		<!-- function ნაწილი -->
+
+</body>
+</html>

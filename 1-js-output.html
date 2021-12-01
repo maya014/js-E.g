@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<div>
+		<h2>innerHTML</h2>
+		<p id="elNumber"></p>
+	</div>
+	<script>
+		document.getElementById('elNumber').innerHTML = 15 + 25;
+		/*getElementById მიმართვას body ელემენტში მყოფს id= elNumber და innerHTML დამატებით კითხულობს ტექსტის სახით  შეაქ elNumber  15+ 25 და გამოაქ ბრაუზერში პასუხი რომელიც იწერება <p id="elNumber"></p> */
+	</script>
+     <!-- innerHTML -->
+
+
+	<div>
+		<h2>გამოთვალე 35+55</h2>
+	 <button type="button" onclick="document.write(35+55)">პასუხი</button><br><br>
+	 <!-- ჰტმლ ნაწილში  ღილაკის ნაწილში შევიტანეთ ჯავასკრიპტი და ჩავწერეთ ის რისი გამოტანა გვინდოდა დაჭერისას ის გამოიტანს -->
+
+
+	 <button type="button" onclick="window.print(35+55)">print</button>
+	 <!-- შეგვიძლია ჩამატება პრინტის ღილაკის სახით რა დროსაც გვერდის ფაილის ამობეჭვდა იქნება შესაძლებელი -->
+	 
+		<h2>გამოთვლა</h2>
+	 <p id="elNumber1"></p>
+	</div>
+	<script>
+		document.write( 24 + 35 +'<br>');
+		document.write( 54 - 35);
+		/*document.write გამოაქ ჩვეულებრივად ბრაუზერში შესრულებული მაგალითი*/
+    console.log('გამარჯობა')
+    /* ბრაუზერში კოდში შესვლილსა ჩანს ვიყენებთ შემოწმებისას */
+
+
+		window.alert('გამარჯობა');
+
+		/*alert('მაგალითები');*/
+		/*window.alert('პასუხი'+ 15+5)*/ //პასუხი: 155
+		/*window.alert(15+5)*/ // 20
+
+		/*ზედა ნაწილში გახსნისას გვერდის ჩდება პატარა ფანჯარა სადაც გამოაქ გამარჯობა მასთან ერთად თუ დავწერთ ციფრს მაგალიტად ასე window.alert('პასუხი'+ 15+5); ამ დროს გამოიტანს პასუხი 155 ტექსტურად შეაქ. თუ მარტო მიმატებას დავწერთ მაგ: (15+5) გამოტანს 20  ;*/
+	</script>
+</body>
+</html>
