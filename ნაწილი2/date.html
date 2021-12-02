@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>დრო-დღე</title>
+	<!-- https://youtu.be/HyhVjHGb19k -->
+	<style>
+		.block{
+			display: flex;
+			justify-content: center;
+			padding: 25%;
+			background-color: black;
+		}
+		
+		.conteiner{
+			background-color: pink;
+			font-size: 25px;
+			color: #000000;
+			border: 1px solid blue;
+			width: 550px;
+			padding: 10px;
+			text-align: center;
+			border-radius: 10px;
+		}
+	</style>
+</head>
+<body class="block" onLoad="renderTime();">
+	<div id="clockDisplay" class="conteiner"></div>
+
+		<script>
+		 function renderTime(){
+		     
+			/*თარიღი...*/
+			var mydate = new Date();
+			var year =mydate.getYear();
+			if(year < 1000){
+				year += 1900
+			}
+			var day =mydate.getDay();
+			var month= mydate.getMonth();
+			var daym = mydate.getDate();
+			var dayarray = new Array("კვირა", "ორშაბათი ","სამშაბათი","ოთხშაბათი","ხუთშაბათი","პარასკევი","შაბათი");
+		    var montharray = new Array("იანვარი","თებერვალი","მარტი","აპრილი","მაისი","ივნისი","ივლისი","აგვისტო","სექტემბერი","ოქტომბერი","ნოემბერი ","დეკემბერი");
+		/*......*/
+
+		/*დრო*/
+		var currentTime =new Date()
+		var h = currentTime.getHours();
+		var m = currentTime.getMinutes();
+		var s = currentTime.getSeconds();
+
+		if(h == 24){
+			h = 0;
+		}else if(h > 12){
+			h = h - 0;
+		}
+		if(h < 10){
+		  h = "0" + h;
+		}
+		if(m < 10){
+			m = "0" + m;
+		}
+		if(s < 10){
+			s = "0" + s;
+		}
+		var myClock = document.getElementById("clockDisplay");
+		myClock.textContent ="" + dayarray[day]+ " /  "+ daym+ "  "+montharray[month]+ " / "+year+"|" +h+":"+m+":"+s;
+		myClock.innerText = ""+ dayarray[day]+ "  / "+ daym+ "  "+montharray[month] + " / "+ year +" |" + h +":"+ m +":"+s;
+
+		setTimeout("renderTime()", 1000);
+		}
+
+		renderTime();
+
+		</script>
+</body>
+</html>
