@@ -7,12 +7,24 @@
 </head>
 <body>
 	<script>
-	var hello = "გამარჯობა, სამყაროვ! ნახვამდის, სამყაროვ!";
-    var key = "სამყარო";
-    var firstPos = hello.indexOf(key); //indexOf() (პირველი ჩართვის ინდექსის მოსაძებნად)
-    var lastPos = hello.lastIndexOf(key);//ბოლო ჩართვის ინდექსის მოსაძებნად
-    document.write("პირველი ჩართვა: " + firstPos + "<br />");
-    document.write("ბოლო ჩართვა: " + lastPos + "<br />");
+		var hello = "გამარჯობა, სამყაროვ! ნახვამდის, სამყაროვ!";
+        var world = hello.substr(11, 7); // მე-11-დან 7 სიმბოლო ამოჭრის
+        document.write( world +'<br>'); // სამყარო
+
+        // var hello = "გამარჯობა, სამყაროვ! ნახვამდის, სამყაროვ!";
+        var bye = hello.substr(21); // მე-21-დან 
+        document.write(bye +'<br>'); // ნახვამდის, სამყაროვ!
+
+        var hello = "გამარჯობა, ";
+        var world = "სამყაროვ!";
+        hello = hello.concat(world);
+        document.write(hello +'<br>'); // გამარჯობა, სამყაროვ! აერთიანებს
+
+        var message = "დღეს მშვენიერი ამინდია";
+        var stringArray = message.split(" ");
+        for(var str in stringArray)
+        document.write(stringArray[str] + "<br>"); //დაალაგებს ქვედა ქვედა ხაზზე
+	 
 	</script>
 
 </body>

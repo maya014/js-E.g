@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>arrays</title>
+</head>
+<body>
+	<script >
+		var fruit = new Array();
+		fruit[0] = "ვაშლი";
+		fruit[1] = "მსხალი";
+		fruit[2] = "ქლიავი";
+		 
+		document.write("ხილის მასივში " + fruit.length + " ელემენტია: <br><br>");
+		for(var i=0; i < fruit.length; i++)
+		document.write(fruit[i] + "<br>");
+
+
+		var fruit = [];
+
+		fruit.push("ვაშლი"); //მეთოდი push() ამატებს ელემენტს
+		fruit.push("მსხალი");
+		fruit.push("ქლიავი");
+		fruit.push("ალუბალი", "ატამი");
+		 
+		document.write("ხილის მასივში " + fruit.length + " ელემენტია: <br>");
+		document.write(fruit); // ვაშლი,მსხალი,ქლიავი,ალუბალი,ატამი
+
+		var fruit = ["ვაშლი","მსხალი","ქლიავი"];
+     //მეთოდი pop() აბრუნებს მასივის ბოლო ელემენტს და შლის მას:
+		var lastFruit = fruit.pop(); // წავშალოთ მასივის ბოლო ელემენტი
+		document.write(lastFruit + "<br><br><br><br>");
+		document.write("ხილის მასივში " + fruit.length + " ელემენტია: <br>");
+		document.write(fruit);
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>data</title>
+</head>
+<body>
+	<script>
+		
+		var days = ["კვირა","ორშაბათი","სამშაბათი","ოთხშაბათი","ხუთშაბათი","პარასკევი","შაბათი"];
+    var months = ["იანვარი","თებერვალი","მარტი","აპრილი","მაისი","ივნისი",
+                "ივლისი","აგვისტო","სექტემბერი","ოქტომბერი","ნოემბერი","დეკემბერი"];
+            
+    var myDate = new Date();
+    var fullDate = "დღეს " + myDate.getFullYear() + " წლის " + myDate.getDate() + " " + months[myDate.getMonth()] + "ა" + ", " + days[myDate.getDay()];
+    document.write(fullDate); 
+	</script>
+
+</body>
+</html>

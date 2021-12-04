@@ -26,29 +26,30 @@
 	</style>
 </head>
 <body class="block" onLoad="renderTime();">
+	<!-- onload ყველაზე ხშირად გამოიყენება <body> ელემენტში სკრიპტის შესასრულებლად მას შემდეგ, რაც ვებ გვერდმა მთლიანად ჩაიტვირთა მთელი შინაარსი. -->
 	<div id="clockDisplay" class="conteiner"></div>
 
 		<script>
 		 function renderTime(){
 		     
 			/*თარიღი...*/
-			var mydate = new Date();
-			var year =mydate.getYear();
+			var mydate = new Date(); // მიმდინარე დროსთან  დაკავშირებით გამოიყენება
+			var year =mydate.getYear(); //ენიჭება წელი
 			if(year < 1000){
 				year += 1900
 			}
-			var day =mydate.getDay();
-			var month= mydate.getMonth();
-			var daym = mydate.getDate();
+			var day =mydate.getDay(); 
+			var month= mydate.getMonth(); //გამოაქვს თვე საწყისი თვე არის 0 დან
+			var daym = mydate.getDate(); //მიიღება  თვის დღე 1 დან 31 მდე
 			var dayarray = new Array("კვირა", "ორშაბათი ","სამშაბათი","ოთხშაბათი","ხუთშაბათი","პარასკევი","შაბათი");
 		    var montharray = new Array("იანვარი","თებერვალი","მარტი","აპრილი","მაისი","ივნისი","ივლისი","აგვისტო","სექტემბერი","ოქტომბერი","ნოემბერი ","დეკემბერი");
 		/*......*/
 
 		/*დრო*/
 		var currentTime =new Date()
-		var h = currentTime.getHours();
-		var m = currentTime.getMinutes();
-		var s = currentTime.getSeconds();
+		var h = currentTime.getHours(); // მიიღება საათი
+		var m = currentTime.getMinutes(); //მიიღება წუთი
+		var s = currentTime.getSeconds(); //მიიღება წამი
 
 		if(h == 24){
 			h = 0;
@@ -66,13 +67,19 @@
 		}
 		var myClock = document.getElementById("clockDisplay");
 		myClock.textContent ="" + dayarray[day]+ " /  "+ daym+ "  "+montharray[month]+ " / "+year+"|" +h+":"+m+":"+s;
-		myClock.innerText = ""+ dayarray[day]+ "  / "+ daym+ "  "+montharray[month] + " / "+ year +" |" + h +":"+ m +":"+s;
 
+		/*textContent თვისება ადგენს ან აბრუნებს მითითებული კვანძის ტექსტურ შინაარსს და მის ყველა შთამომავალს .*/
+
+		myClock.innerText = ""+ dayarray[day]+ "  / "+ daym+ "  "+montharray[month] + " / "+ year +" |" + h +":"+ m +":"+s;
+        /*textContent აბრუნებს ყველა ელემენტის ტექსტურ შინაარსს , ხოლო innerText აბრუნებს ყველა ელემენტის შინაარსს, გარდა <script> და <style> ელემენტებისა.*/
 		setTimeout("renderTime()", 1000);
 		}
+		/*setTimeout() მეთოდი იძახებს ფუნქციას ან აფასებს გამონათქვამს მილიწამების განსაზღვრული რაოდენობის შემდეგ.
+
+        1000 ms = 1 წამი.*/
 
 		renderTime();
-            /*ბოდიში მიმართავს onLoad="renderTime(); */
+            /*body-ში მიმართავს onLoad="renderTime(); */
 		</script>
 </body>
 </html>
